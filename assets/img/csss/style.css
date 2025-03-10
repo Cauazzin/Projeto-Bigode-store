@@ -1,3 +1,9 @@
+:root{
+    --color-white:#fff;
+    --color-gray-100: #181818;
+    --color-gray-300: #323232;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +12,14 @@
     text-decoration: none;
 }
 
-.navbar,
-.home {
+.navbar, .home, section {
     max-width: 1280px;
     margin: auto;
+}
+
+section{
+    max-width: 1096px;
+    padding: 60px 0px;
 }
 
 
@@ -35,7 +45,7 @@ header {
             }
     
             & a:first-child {
-                color: #fff;
+                color: var(--color-white);
             }
     
         }
@@ -48,13 +58,13 @@ header {
                 border-radius: 8px;
                 border: none;
                 background: #3b44f6;
-                color: #fff;
+                color: var(--color-white);
                 cursor: pointer;
             }
 
             & button:last-child {
                 background-color: transparent;
-                border: #fff 1px solid;
+                border: var(--color-white) 1px solid;
             }
 
         }
@@ -66,7 +76,7 @@ header {
 
         & .title{
         margin-bottom: 64px;
-        color: #fff;
+        color: var(--color-white);
 
         & h1{
             font-size: 48px;
@@ -84,9 +94,86 @@ header {
             border-radius: 8px;
             border: none;
             background: #3b44f6;
-            color: #fff;
+            color: var(--color-white);
             cursor: pointer;
         }
     }
 
+}
+
+main{
+
+    & .bigode-store{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        & .title, .cards{
+            margin: auto;
+            text-align: center;
+        }
+
+        & .cards{
+            display: flex;
+            gap: 83px;
+        }
+
+    }
+
+    & .generos{
+       display: flex; 
+       gap: 24px;
+       flex-direction: column;
+
+       & .title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: auto;
+
+        & p{
+            color: #3B44F6;
+        }
+       }
+
+      & .cards{
+        display: flex;
+        gap: 16px;
+
+        & .card{
+            width: 199px;
+            height: 199px;
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            color: #FFF;
+            font-family: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* filter: grayscale(1); */
+        }
+
+        & .card:nth-child(1) {
+            background-image: url(../stardew\ walley.png);
+        }
+        & .card:nth-child(2) {
+            background-image: url(../halo5.png);
+        }
+        & .card:nth-child(3) {
+            background-image: url(../cyberpunk.png);
+        }
+        & .card:nth-child(4) {
+            background-image: url(../valiant\ hearts.png);
+        }
+        & .card:nth-child(5) {
+            background-image: url(../the\ witcher.png);
+        }
+        & .card:nth-child(6) {
+            background-image: url(../Fifa\ 22.png);
+        }
+       } 
+
+    }
 }
